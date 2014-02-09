@@ -10,7 +10,7 @@ import XMonad.Hooks.ManageDocks(avoidStruts)
 import XMonad.Layout.NoBorders(smartBorders)
 
 main = xmonad $ EWMH.ewmh xfceConfig
-         { terminal = "urxvt"
+         { terminal = "xfce4-terminal"
          , modMask = mod4Mask
 	 , manageHook = myManageHook <+> manageHook xfceConfig
 	 , workspaces = myWorkspaces

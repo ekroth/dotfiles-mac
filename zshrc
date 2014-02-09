@@ -20,7 +20,9 @@ compinit
 #------------------------------
 PATH=$HOME/bin:$HOME/Dropbox/linux/script:/tools:/opt/android-sdk:/usr/bin/vendor_perl:/opt/kde/bin:${PATH}
 
-export TERM=urxvt
+# This is just for colors and settings,
+# works better for xfce4-terminal than xterm-*
+export TERM='rxvt-unicode-256color'
 export EDITOR='emacs'
 export BROWSER=/usr/bin/chromium
 export ANDROID_HOME=/opt/android-sdk
