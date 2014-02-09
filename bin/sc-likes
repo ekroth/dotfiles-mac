@@ -1,0 +1,5 @@
+# $1 = user id
+# $2 = user api key
+# $3 = mpd hostname
+
+for i in $(curl 'https://api.soundcloud.com/users/$1/favorites.json?client_id=$2&limit=200' | jshon -a -e id -u); do mpc -h $3 load soundcloud://track/$i; done

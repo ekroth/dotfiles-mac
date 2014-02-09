@@ -1,0 +1,6 @@
+#!/bin/bash
+if [[ ! $(ps -A | grep firefox | grep -v firefox-detox) = "" ]]; then
+	notify-send "firefox already open!"
+else
+	firefox &
+fi

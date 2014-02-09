@@ -1,0 +1,3 @@
+#!/bin/sh
+
+mpc -q -h $1 load soundcloud://url/$(xclip -o | sed 's/https/http/g')
