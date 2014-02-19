@@ -7,5 +7,6 @@
 (setq-default c-basic-offset 4)
 
 (load "c")
-(load "octave")
-(load "scala")
+
+;; load local modes
+(load "local-modes")
