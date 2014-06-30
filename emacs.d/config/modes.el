@@ -1,5 +1,8 @@
 (add-to-list 'load-path "~/.emacs.d/config/modes/")
 
+;; double space nono
+(setq-default sentence-end-double-space nil)
+
 ;; Default
 ;; use spaces
 (setq-default indent-tabs-mode nil)
@@ -7,6 +10,9 @@
 (setq-default c-basic-offset 4)
 
 (load "c")
-
-;; load local modes
-(load "local-modes")
+(load "cpp")
+(load "haskell")
+(load "octave")
+(load "scala")
+(load "markdown")
+(require 'rust-mode)

@@ -1,7 +1,7 @@
+(add-to-list 'custom-theme-load-path "~/.emacs.d/config/themes")
+
 ;; theme
-(require 'color-theme)
-(color-theme-initialize)
-(color-theme-solarized-dark)
+(load-theme 'solarized-light t)
 
 ;; remove gui
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))

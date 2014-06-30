@@ -1,5 +1,3 @@
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/haskell-mode")
-
 (load "haskell-mode")
 
 ;; optional modules

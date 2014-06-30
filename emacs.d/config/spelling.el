@@ -19,4 +19,4 @@
                                               iso-8859-1))
 
 (setq ispell-program-name "hunspell"          ; Use hunspell to correct mistakes
-      ispell-dictionary   "svenska-hunspell") ; Default dictionary to use
+      ispell-dictionary   "english-hunspell") ; Default dictionary to use
