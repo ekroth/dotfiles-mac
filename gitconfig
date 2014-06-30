@@ -6,4 +6,22 @@
 [push]
 	default = simple
 [color]
-	ui = true
+	ui = 1
+[help]
+	autocorrect = 1
+[alias]
+	la = "!git config -l | grep alias | cut -c 7-"
+	st = status -sb
+	lg = log --all --graph --decorate --oneline --abbrev-commit
+	cm = commit
+        bl = blame --no-merges
+	co = checkout
+	p = push
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	le = log --oneline --decorate
+	f = "!git ls-files | grep -i"
+
+
