@@ -1,0 +1,8 @@
+[term]
+Description=term
+desktop=2
+desktoprule=3
+types=4294967295
+wmclass=konsole
+wmclasscomplete=false
+wmclassmatch=2

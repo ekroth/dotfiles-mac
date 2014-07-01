@@ -1,0 +1,10 @@
+[web]
+Description=web
+closeable=false
+closeablerule=2
+desktop=1
+desktoprule=3
+types=4294967295
+wmclass=firefox
+wmclasscomplete=false
+wmclassmatch=2

@@ -1,0 +1,8 @@
+[no minimize]
+Description=no minimize
+minimize=false
+minimizerule=2
+types=4294967295
+wmclass=
+wmclasscomplete=false
+wmclassmatch=0
