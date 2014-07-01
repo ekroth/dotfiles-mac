@@ -1,4 +1,4 @@
-. $HOME/.zshrc_specific
+. /etc/profile.d/autojump.zsh
 
 #------------------------------
 # History stuff
