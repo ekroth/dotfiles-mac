@@ -1,5 +1,5 @@
 import XMonad
-import XMonad.Config.Xfce
+import XMonad.Config.Kde
 
 import XMonad.Actions.CycleWS
 import XMonad.Util.EZConfig(additionalKeys)
@@ -9,23 +9,22 @@ import qualified XMonad.Hooks.EwmhDesktops as EWMH
 import XMonad.Hooks.ManageDocks(avoidStruts)
 import XMonad.Layout.NoBorders(smartBorders)
 
-main = xmonad $ EWMH.ewmh xfceConfig
-         { terminal = "xfce4-terminal"
+main = xmonad $ EWMH.ewmh
+         { terminal = "konsole"
          , modMask = mod4Mask
-	 , manageHook = myManageHook <+> manageHook xfceConfig
+	 , manageHook = myManageHook <+> manageHook kdeConfig
 	 , workspaces = myWorkspaces
-	 , handleEventHook = handleEventHook xfceConfig <+> EWMH.fullscreenEventHook
-	 , layoutHook = avoidStruts $ smartBorders $ layoutHook xfceConfig 
+	 , handleEventHook = handleEventHook <+> EWMH.fullscreenEventHook
+	 , layoutHook = avoidStruts $ smartBorders $ layoutHook 
          } `additionalKeys` myKeys
 
 myWorkspaces = [ "term", "web", "code", "other" ]
 
-myManageHook = composeAll
-	[ className =? "Firefox-bin" --> doShift "web"
-	, className =? "Xfce4-notifyd" --> doIgnore
-	, className =? "xfce4-terminal" --> doShift "term"
-	, className =? "Thunar" --> doShift "other"
-	, (className =? "Firefox" <&&> resource =? "Dialog") --> doFloat ]
+myManageHook = composeAll []
+--myManageHook = composeAll
+--	[ className =? "Firefox-bin" --> doShift "web"
+--	, className =? "Thunar" --> doShift "other"
+--	, (className =? "Firefox" <&&> resource =? "Dialog") --> doFloat ]
 
 myKeys = 
 	[ ((mod4Mask,				xK_period),  nextWS)
