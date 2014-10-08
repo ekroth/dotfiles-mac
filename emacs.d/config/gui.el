@@ -11,7 +11,7 @@
 ;; Line numbers
 (require 'linum)
 (global-linum-mode 1)
-(setq linum-format "%d ")
+(setq linum-format "%4d ")
 (column-number-mode 1)
 
 ;; Pretty word wrapping

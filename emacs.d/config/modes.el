@@ -9,6 +9,9 @@
 ;; indent 4
 (setq-default c-basic-offset 4)
 
+(require 'sr-speedbar)
+(require 'gtags)
+
 (load "c")
 (load "cpp")
 (load "haskell")
