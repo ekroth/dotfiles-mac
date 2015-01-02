@@ -1,6 +1,4 @@
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(package-initialize)
-(unless (package-installed-p 'scala-mode2)
-  (package-refresh-contents) (package-install 'scala-mode2))
+(use-package scala-mode2
+  :commands scala-mode
+  :init
+  (add-to-list 'auto-mode-alist '("\\.scala$" . scala-mode)))

@@ -1,4 +1,5 @@
-(add-to-list 'custom-theme-load-path "~/.emacs.d/config/themes")
+(use-package color-theme :ensure color-theme)
+(use-package color-theme-solarized :ensure color-theme-solarized)
 
 ;; theme
 (load-theme 'solarized-light t)
