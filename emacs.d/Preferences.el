@@ -12,10 +12,7 @@
       (package-install 'use-package)))
 (require 'use-package)
 
-;; global lisp
 (add-to-list 'load-path "/usr/share/emacs/site-lisp")
-(add-to-list 'load-path "~/Library/Preferences/Aquamacs Emacs/config/")
-(add-to-list 'load-path "~/Library/Preferences/Aquamacs Emacs/ext/")
 
 ;; global backup directory
 (setq backup-directory-alist `(("." . "~/Library/Preferences/Aquamacs Emacs/backups")))
@@ -26,10 +23,10 @@
 (setq vc-follow-symlinks t)
 
 ;; setup gui
-(load "gui")
+(load "config/gui")
 
 ;; load modes
-(load "modes")
+(load "config/modes")
 
 ;; Aquamacs
 (custom-set-variables
