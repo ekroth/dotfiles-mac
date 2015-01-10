@@ -81,4 +81,6 @@ source $ZSH/oh-my-zsh.sh
 
 source /usr/local/etc/autojump.zsh
 
+export EDITOR=nano
+
 alias ls='ls -G'
