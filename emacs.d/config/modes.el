@@ -11,7 +11,7 @@
 (load "modes/c")
 (load "modes/cpp")
 (load "modes/haskell")
-(load "modes/json")
+(load "modes/jzon")
 (load "modes/markdown")
 (load "modes/matlab")
 (load "modes/rust")
