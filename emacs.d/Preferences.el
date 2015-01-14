@@ -12,6 +12,8 @@
       (package-install 'use-package)))
 (require 'use-package)
 
+(add-to-list 'load-path "~/.emacs.d/config")
+(add-to-list 'load-path "~/.emacs.d/modes")
 (add-to-list 'load-path "/usr/share/emacs/site-lisp")
 
 ;; global backup directory
@@ -23,10 +25,10 @@
 (setq vc-follow-symlinks t)
 
 ;; setup gui
-(load "config/gui")
+(load "~/.emacs.d/config/gui")
 
 ;; load modes
-(load "config/modes")
+(load "~/.emacs.d/config/modes")
 
 ;; Aquamacs
 (custom-set-variables
