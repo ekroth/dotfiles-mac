@@ -16,3 +16,4 @@
 (load "modes/matlab")
 (load "modes/rust")
 (load "modes/scala")
+(load "modes/toml")
