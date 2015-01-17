@@ -1,4 +1,5 @@
-(add-to-list 'custom-theme-load-path "~/.emacs.d/config/themes")
+(use-package color-theme :ensure color-theme)
+(use-package color-theme-solarized :ensure color-theme-solarized)
 
 ;; theme
 (load-theme 'solarized-light t)
@@ -11,11 +12,17 @@
 ;; Line numbers
 (require 'linum)
 (global-linum-mode 1)
-(setq linum-format "%4d ")
+(setq linum-format "%d ")
 (column-number-mode 1)
 
 ;; Pretty word wrapping
 (global-visual-line-mode 1)
+
+;; trailing whitespace
+(setq-default show-trailing-whitespace t)
+;; but not for ansi-term
+(add-hook 'ansi-term
+          (lambda () (setq show-trailing-whitespace t)))
 
 ;; font
 (custom-set-variables

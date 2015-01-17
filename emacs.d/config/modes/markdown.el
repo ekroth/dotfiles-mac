@@ -1,4 +1,5 @@
-(autoload 'markdown-mode "markdown-mode" "Markdown mode" t)
-(setq auto-mode-alist (cons '("\\.md\\'" . markdown-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.markdown\\'" . markdown-mode) auto-mode-alist))
-
+(use-package markdown-mode
+  :init
+  (progn
+    (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
+    (add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))))
