@@ -18,6 +18,12 @@
 ;; Pretty word wrapping
 (global-visual-line-mode 1)
 
+;; trailing whitespace
+(setq-default show-trailing-whitespace t)
+;; but not for ansi-term
+(add-hook 'ansi-term
+          (lambda () (setq show-trailing-whitespace t)))
+
 ;; font
 (custom-set-variables
 '(font-use-system-font t))

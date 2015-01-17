@@ -5,7 +5,7 @@
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
 
-;; use-package is required by all other 
+;; use-package is required by all other
 (if (not (package-installed-p 'use-package))
     (progn
       (package-refresh-contents)
