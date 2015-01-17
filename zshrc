@@ -65,7 +65,7 @@ bindkey -e
 #------------------------------
 # Variables
 #------------------------------
-PATH=$HOME/bin:$HOME/Dropbox/linux/script:/tools:/opt/android-sdk:/usr/bin/vendor_perl:/usr/bin:/usr/sbin
+PATH=$HOME/bin:$HOME/Dropbox/linux/script:/tools:/opt/android-sdk:/usr/bin/vendor_perl:/usr/local/bin:/usr/bin:/usr/sbin
 
 # This is just for colors and settings,
 # works better for xfce4-terminal than xterm-*
@@ -93,6 +93,7 @@ alias twat='mkdir wat && cd wat'
 alias ec='emacsclient -qc'
 alias emc='ec'
 alias emacs='ec'
+alias rp='rsync --progress'
 
 # SSH
 alias evalssh='eval `keychain --agents ssh --eval id_rsa` || exit 1'
