@@ -9,6 +9,7 @@
 (setq-default c-basic-offset 4)
 
 (load "modes/c")
+(load "modes/cuda")
 (load "modes/cpp")
 (load "modes/haskell")
 (load "modes/jzon")
