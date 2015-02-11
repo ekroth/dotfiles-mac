@@ -79,8 +79,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source /usr/local/etc/autojump.zsh
+source /usr/local/etc/profile.d/autojump.sh
 
 export EDITOR=nano
+export HOME_IP='31.208.44.126'
 
 alias ls='ls -G'
