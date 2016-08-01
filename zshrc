@@ -50,8 +50,13 @@ plugins=(git osx)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Library/Developer/CommandLineTools/usr/bin:/usr/local/texlive/2014/bin/x86_64-darwin:/Library/Haskell/bin:$HOME/.cabal/bin:$HOME/Library/Haskell/bin:~/.cargo/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
+
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$AF_PATH/lib"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -80,9 +85,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 source /usr/local/etc/profile.d/autojump.sh
 
 export EDITOR=nano
-export HOME_IP='31.208.44.126'
+export AF_PATH='/usr/local/opt/arrayfire'
 
 alias ls='ls -G'
+
+bindkey -e
+bindkey '^[K' kill-line
+
+[[ -a .zshrc_private ]] && source .zshrc_private
